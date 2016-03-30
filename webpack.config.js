@@ -102,6 +102,8 @@ if(TARGET === 'start' || !TARGET) {
 }
 
 if(TARGET === 'build') {
+  const CSS_PROCEDURE = 'css-loader?modules&importLoaders=1&localIdentName=[hash:base64:5]'
+
   module.exports = merge(common, {
     entry: {
       vendor: Object.keys(pkg.dependencies)
@@ -109,10 +111,10 @@ if(TARGET === 'build') {
     module: {
       loaders: [{
           test: /\.styl$/,
-          loader: ExtractTextPlugin.extract('style-loader', 'css-loader?modules&importLoaders=1&localIdentName=[hash:base64:5]!stylus-loader'),
+          loader: ExtractTextPlugin.extract('style-loader', CSS_PROCEDURE + '!stylus-loader'),
         }, {
           test: /\.css$/,
-          loader: ExtractTextPlugin.extract('style-loader', 'css-loader?modules&importLoaders=1&localIdentName=[hash:base64:5]'),
+          loader: ExtractTextPlugin.extract('style-loader', CSS_PROCEDURE),
         },
       ]
     },
