@@ -58,7 +58,7 @@ const common = {
   ],
   output: {
     path: PATHS.build,
-    filename: '[name].js',
+    filename: '/[name].js',
   },
   resolve: {
     extensions: ['', '.js', '.jsx'],
@@ -135,7 +135,7 @@ if(TARGET === 'build') {
     ],
     output: {
       path: PATHS.build,
-      filename: '[name].[chunkhash].js',
+      filename: '/[name].[chunkhash].js',
       chunkFilename: '[chunkhash].js'
     },
   })
