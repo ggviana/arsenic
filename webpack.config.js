@@ -2,6 +2,7 @@ const path                = require('path')
 const webpack             = require('webpack')
 const merge               = require('webpack-merge')
 const pkg                 = require('./package.json')
+const jeet                = require('jeet')
 
 const CleanWebpackPlugin  = require('clean-webpack-plugin')
 const ExtractTextPlugin   = require('extract-text-webpack-plugin')
@@ -66,6 +67,9 @@ const common = {
       PATHS.app,
       PATHS.node_modules,
     ],
+  },
+  stylus: {
+    use: [jeet()]
   },
 }
 
