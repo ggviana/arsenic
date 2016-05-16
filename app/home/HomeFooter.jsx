@@ -1,5 +1,3 @@
-export default function () {
-  return (
-    <footer></footer>
-  )
-}
+export default () => (
+  <footer></footer>
+)

@@ -2,7 +2,7 @@ import { Router, Route, IndexRoute, Redirect } from 'react-router'
 
 import Home   from 'home/Home'
 import Lobby  from 'lobby/container'
-import Room   from 'room/Room'
+import Room   from 'room/container'
 
 export default (history) => () => (
   <Router history={history}>

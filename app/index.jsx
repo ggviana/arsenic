@@ -1,4 +1,4 @@
-import { Provider }   from 'react-redux'
+import { Provider }        from 'react-redux'
 import 'normalize.css/normalize.css'
 
 import createApplication   from 'createApplication'

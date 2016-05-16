@@ -1,4 +1,4 @@
-export default function (document) {
+export default (document) => {
   var application = document.createElement('section')
   application.id = 'application'
 
